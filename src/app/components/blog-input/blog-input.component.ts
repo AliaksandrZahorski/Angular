@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogService } from '../../services/blog.service';
 
 @Component({
   selector: 'app-blog-input',
@@ -11,7 +12,7 @@ export class BlogInputComponent implements OnInit {
   private autor: string;
   private text: string;
 
-  constructor() {
+  constructor(private blogService: BlogService) {
     this.title = '';
     this.autor = '';
     this.text = '';
@@ -21,7 +22,10 @@ export class BlogInputComponent implements OnInit {
   }
 
   saveBlog() {
-    console.log(this.title, this.autor, this.text);
+    this.blogService.addBlog(this.title, this.autor, this.text);
+    this.title = '';
+    this.autor = '';
+    this.text = '';
   }
 
 }
