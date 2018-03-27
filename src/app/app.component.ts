@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { BlogService } from './services/blog.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,7 +9,7 @@ import { Component } from '@angular/core';
   providers: []
 })
 export class AppComponent {
-  constructor() {
+  constructor(private blogService: BlogService) {
   }
   
   ngOnInit() {

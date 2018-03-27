@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BlogInputComponent } from './components/blog-input/blog-input.component';
 import { BlogService } from './services/blog.service';
+import { BlogItemComponent } from './components/blog-item/blog-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BlogInputComponent
+    BlogInputComponent,
+    BlogItemComponent
   ],
   imports: [
     BrowserModule,

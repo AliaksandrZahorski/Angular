@@ -16,6 +16,13 @@ export class BlogService {
   public addBlog(title: string, autor: string, text: string): void {
     this.blogs.push(new Blog(this.id, title, autor, text));
     this.id++;
-    console.log(this.blogs);
+  }
+
+  public getBlogs(): Blog[] {
+    return this.blogs;
+  }
+
+  public deleteBlog(id: number): void {
+    this.blogs = this.blogs.filter( b => b.id !== id);
   }
 }
