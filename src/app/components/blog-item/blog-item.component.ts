@@ -12,8 +12,12 @@ export class BlogItemComponent implements OnInit {
 
   @Input()
   private blog: Blog;
+  public countItems: number;
 
-  constructor(private blogService: BlogService) { }
+  constructor(private blogService: BlogService) {
+    this.countItems = blogService.getBlogs().length;
+    console.log(this.countItems);
+   }
 
   ngOnInit() {
   }

@@ -25,4 +25,7 @@ export class BlogService {
   public deleteBlog(id: number): void {
     this.blogs = this.blogs.filter( b => b.id !== id);
   }
+  public getCount(): number {
+    return this.blogs.length;
+  }
 }

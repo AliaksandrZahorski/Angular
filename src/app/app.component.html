@@ -1,6 +1,7 @@
 <section>
   <app-header></app-header>
   <app-blog-input></app-blog-input>
+  <div class="blogs">Records count: {{blogService.getCount()}}</div>
   <div
     *ngFor="let blog of blogService.getBlogs()"
     class="blogs"
